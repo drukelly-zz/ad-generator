@@ -13,9 +13,15 @@
     "sass:watch": "nodemon -e scss -x \"npm run sass:build\"",
     "dev": "concurrently \"npm-run-all -p sass:*\" \"live-server\""
   },
-  "repository": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drukelly/Ad-Generator.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {}
+  "bugs": {
+    "url": "https://github.com/drukelly/Ad-Generator/issues"
+  },
+  "homepage": "https://github.com/drukelly/Ad-Generator#readme"
 }

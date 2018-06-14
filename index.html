@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VMware Ad Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.0/css/tachyons.min.css"/>
+  <link rel="stylesheet" href="dist/css/app.css"/>
+  <script src="lib/moment.min.js"></script>
+  <script src="lib/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.js"></script>
+</head>
+<body class="sans-serif ma4">
+  
+  <div id="app" class="w-100">
+
+    <h1 class="black-60 f5 ma0 tracked"> VMware <span class="ttu">Ad Generator</span> </h1>
+    <h3 class="black-30 f7 ma0 ttu tracked"> (Beta) </h3>
+    
+    <div class="flex">
+
+      <div class="w-30">
+        <div class="bg-light-gray black-80 mt4 pv2">
+          <ol>
+            <li class="mb2">Choose a design and ad unit</li>
+            <li class="mb2">Select a color variant (if applicable)</li>
+            <li>Download</li>
+          </ol>
+        </div>
+
+        <form method="post" id="textGenerator" class="pt4">
+          <label class="dib mb2 w-100">
+            <div class="black-50 dib f7 mr1 tracked ttu">Design</div>
+            <ul id="designOptions" class="list mt1 pl0">
+              <!-- designOptions injected here -->
+            </ul>
+          </label>
+          <label class="dib mb2 w-100">
+            <div class="black-50 dib f7 mr1 tracked ttu">Ad Unit</div>
+            <div id="adUnitOptions" class="mt1 mb3 f7 black-80">
+              <!-- adUnitOptions injected here -->
+            </div>
+          </label>
+          <label for="headlineText" class="dib mb4 w-100">
+            <div class="black-50 f7 mb1 tracked ttu">Headline</div>
+            <input type="text" maxlength="52" name="headlineText" class="ba b--black-40 pa1 w-100">
+          </label>
+          <label for="bannerText" class="dib mb4 w-100">
+            <div class="black-50 f7 mb1 tracked ttu">Copy</div>
+            <input type="text" maxlength="52" name="bannerText" class="ba b--black-40 pa1 w-100">
+          </label>
+          <label for="callToActionText" class="dib mb4 w-100">
+            <div class="black-50 f7 mb1 tracked ttu">Call To Action</div>
+            <input type="text" maxlength="52" name="callToActionText" class="ba b--black-40 pa1 w-100">
+          </label>
+          <label id="colorVariant" class="hide mb2 w-100">
+            <div class="black-50 dib f7 mr1 tracked ttu">Color Variant</div>
+            <select name="colorOptions" id="colorOptions" class="hide">
+              <!-- colorOptions injected here -->
+            </select>
+          </label>
+        </form>
+      </div>
+
+      <div class="w-10"></div>
+      
+      <div class="w-60">
+        <strong class="black-50 dib f7 mb0 mr1 tracked ttu">Preview</strong>
+        <div id="previewWindowContainer" class="ba b--black-40 flex mt1 mb4 ad160x600">
+          <div id="previewWindow">
+            <div id="positioningContainer">
+              <div id="vmwareLogo"></div>
+              <div>
+                <div id="headlineText"></div>  
+                <div id="bannerText"></div>  
+              </div>
+              <a href="#" id="callToAction" class="link">
+                <span class="ph3 pv1 white"></span>
+              </a>
+            </div>
+            <div class="background"></div>
+          </div>
+        </div>
+        <p class="black-50 f7 ttu tracked"> <a href="#" id="adDownload" class="bg-green br-pill dib dim link mr4 ph3 pv2 white">Download</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "headlineText": "Headline. Keep This Short for Impact.",
+  "bannerText": "Copy Would Go Here. Two Lines and 52 characters max.",
+  "callToActionText": "Learn More",
+  "adUnits": ["160x600", "300x250", "728x90"],
+  "creatives": [{
+    "label": "watermark",
+    "options": [
+      "dark-blue",
+      "light-blue",
+      "light-green"
+    ]
+  },
+  {
+    "label": "color-triangles",
+    "options": [
+      "dark-blue",
+      "light-blue",
+      "light-green",
+      "white"
+    ]
+  },
+  {
+    "label": "white-triangles",
+    "options": [
+      "white"
+    ]
+  }]
+}
